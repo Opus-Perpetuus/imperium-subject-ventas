@@ -1,0 +1,188 @@
+{
+  "id": "SUBJECT-ventas",
+  "technicalId": "subject-ventas",
+  "name": "Ventas",
+  "version": "0.1.0",
+  "image": "ghcr.io/opus-perpetuus/subject-ventas:0.1.0",
+  "compat": {
+    "nox": ">=0.5.0",
+    "kit": "^0.5.0"
+  },
+  "api": {
+    "basePath": "/",
+    "port": 3000,
+    "healthPath": "/health"
+  },
+  "permissions": [
+    {
+      "id": "subject.ventas.purchase-order.read",
+      "label": "Ver Órdenes de compra"
+    },
+    {
+      "id": "subject.ventas.purchase-order.write",
+      "label": "Editar Órdenes de compra"
+    },
+    {
+      "id": "subject.ventas.pedidos.read",
+      "label": "Ver Pedidos"
+    },
+    {
+      "id": "subject.ventas.pedidos.write",
+      "label": "Editar Pedidos"
+    },
+    {
+      "id": "subject.ventas.invoice-request.read",
+      "label": "Ver Solicitudes de facturación"
+    },
+    {
+      "id": "subject.ventas.invoice-request.write",
+      "label": "Editar Solicitudes de facturación"
+    },
+    {
+      "id": "subject.ventas.products.read",
+      "label": "Ver Productos"
+    },
+    {
+      "id": "subject.ventas.products.write",
+      "label": "Editar Productos"
+    },
+    {
+      "id": "subject.ventas.lista-de-precios.read",
+      "label": "Ver Lista de precios"
+    },
+    {
+      "id": "subject.ventas.lista-de-precios.write",
+      "label": "Editar Lista de precios"
+    },
+    {
+      "id": "subject.ventas.contacto.read",
+      "label": "Ver Contacto"
+    },
+    {
+      "id": "subject.ventas.contacto.write",
+      "label": "Editar Contacto"
+    },
+    {
+      "id": "subject.ventas.sku.read",
+      "label": "Ver Productos"
+    },
+    {
+      "id": "subject.ventas.sku.write",
+      "label": "Editar Productos"
+    }
+  ],
+  "pages": [
+    {
+      "id": "ventas.purchase-order",
+      "path": "purchase-order",
+      "permission": "subject.ventas.purchase-order.read"
+    },
+    {
+      "id": "ventas.pedidos",
+      "path": "pedidos",
+      "permission": "subject.ventas.pedidos.read"
+    },
+    {
+      "id": "ventas.invoice-request",
+      "path": "invoice-request",
+      "permission": "subject.ventas.invoice-request.read"
+    },
+    {
+      "id": "ventas.products",
+      "path": "products",
+      "permission": "subject.ventas.products.read"
+    },
+    {
+      "id": "ventas.lista-de-precios",
+      "path": "lista-de-precios",
+      "permission": "subject.ventas.lista-de-precios.read"
+    },
+    {
+      "id": "ventas.contacto",
+      "path": "contacto",
+      "permission": "subject.ventas.contacto.read"
+    },
+    {
+      "id": "ventas.sku",
+      "path": "sku",
+      "permission": "subject.ventas.sku.read"
+    }
+  ],
+  "menu": [
+    {
+      "id": "ventas.root",
+      "label": "Ventas",
+      "order": 0,
+      "children": [
+        {
+          "id": "ventas.purchase-order",
+          "label": "Órdenes de compra",
+          "order": 0,
+          "pageId": "ventas.purchase-order",
+          "path": "purchase-order",
+          "permission": "subject.ventas.purchase-order.read"
+        },
+        {
+          "id": "ventas.lista-de-precios",
+          "label": "Lista de precios",
+          "order": 0,
+          "pageId": "ventas.lista-de-precios",
+          "path": "lista-de-precios",
+          "permission": "subject.ventas.lista-de-precios.read"
+        },
+        {
+          "id": "ventas.contacto",
+          "label": "Contacto",
+          "order": 0,
+          "pageId": "ventas.contacto",
+          "path": "contacto",
+          "permission": "subject.ventas.contacto.read"
+        },
+        {
+          "id": "ventas.sku",
+          "label": "Productos",
+          "order": 0,
+          "pageId": "ventas.sku",
+          "path": "sku",
+          "permission": "subject.ventas.sku.read"
+        },
+        {
+          "id": "ventas.invoice-request",
+          "label": "Solicitudes de facturación",
+          "order": 1,
+          "pageId": "ventas.invoice-request",
+          "path": "invoice-request",
+          "permission": "subject.ventas.invoice-request.read"
+        },
+        {
+          "id": "ventas.pedidos",
+          "label": "Pedidos",
+          "order": 10,
+          "pageId": "ventas.pedidos",
+          "path": "pedidos",
+          "permission": "subject.ventas.pedidos.read"
+        },
+        {
+          "id": "ventas.products",
+          "label": "Productos",
+          "order": 10,
+          "pageId": "ventas.products",
+          "path": "products",
+          "permission": "subject.ventas.products.read"
+        }
+      ]
+    }
+  ],
+  "storage": {
+    "domain": "shared-nox-postgres"
+  },
+  "resources": {
+    "purchase-order": "purchase_order",
+    "pedidos": "pedidos",
+    "invoice-request": "invoice_request",
+    "products": "products",
+    "lista-de-precios": "lista_de_precios",
+    "contacto": "contacto",
+    "sku": "sku"
+  }
+}
