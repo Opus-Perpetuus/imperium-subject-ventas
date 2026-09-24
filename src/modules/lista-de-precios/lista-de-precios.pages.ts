@@ -50,12 +50,12 @@ export const lista_de_precios_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
-              { name: "product", component: "input-text", label: "product" },
+              { name: "product", component: "input-datalist", label: "product", optionsSource: "api://m/subject-almacen/products?as=options&limite=1000" },
               { name: "iva", component: "input-text", label: "iva" },
-              { name: "descripcion", component: "input-text", label: "descripcion" },
-              { name: "precio", component: "input-number", label: "precio" },
+              { name: "descripcion", component: "input-textarea", label: "descripcion" },
+              { name: "precio", component: "input-money", label: "precio" },
             ],
           },
         },

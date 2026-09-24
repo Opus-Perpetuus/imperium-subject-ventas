@@ -52,7 +52,7 @@ export const sku_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "puedoProducirlo", component: "input-checkbox", label: "puedoProducirlo" },
               { name: "puedoComprarlo", component: "input-checkbox", label: "puedoComprarlo" },
@@ -60,7 +60,7 @@ export const sku_pages: KirletPageDecl[] = [
               { name: "codigo", component: "input-text", label: "codigo" },
               { name: "unidad", component: "input-text", label: "unidad" },
               { name: "existencia", component: "input-number", label: "existencia" },
-              { name: "costoVenta", component: "input-number", label: "costoVenta" },
+              { name: "costoVenta", component: "input-money", label: "costoVenta" },
               { name: "stockMinimo", component: "input-number", label: "stockMinimo" },
               { name: "stockMaximo", component: "input-text", label: "stockMaximo" },
               { name: "etiquetas", component: "input-text", label: "etiquetas" },
