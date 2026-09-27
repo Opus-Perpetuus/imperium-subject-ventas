@@ -192,5 +192,8 @@
     "lista-de-precios": "lista-de-precios",
     "contacto": "contacto",
     "sku": "sku"
-  }
+  },
+  "dependsOn": [
+    "subject-almacen"
+  ]
 }

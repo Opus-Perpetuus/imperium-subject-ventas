@@ -16,6 +16,7 @@ export const SUBJECT = define_subject({
   image: `ghcr.io/opus-perpetuus/subject-ventas:${pkg.version}`,
   compat: { nox: ">=0.5.0", kit: "^0.5.0" },
   schema_version: 1,
+  dependsOn: ["subject-almacen"],
   menu_root: {
     id: "ventas.root",
     label: "Ventas",
