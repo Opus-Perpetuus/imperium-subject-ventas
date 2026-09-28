@@ -69,6 +69,30 @@
     {
       "id": "subject.ventas.sku.write",
       "label": "Editar Productos"
+    },
+    {
+      "id": "subject.ventas.purchase-request.read",
+      "label": "Ver Solicitudes de compra"
+    },
+    {
+      "id": "subject.ventas.purchase-request.write",
+      "label": "Editar Solicitudes de compra"
+    },
+    {
+      "id": "subject.ventas.supplier-invoice.read",
+      "label": "Ver Facturas de proveedor"
+    },
+    {
+      "id": "subject.ventas.supplier-invoice.write",
+      "label": "Editar Facturas de proveedor"
+    },
+    {
+      "id": "subject.ventas.supplier-payment.read",
+      "label": "Ver Pagos a proveedor"
+    },
+    {
+      "id": "subject.ventas.supplier-payment.write",
+      "label": "Editar Pagos a proveedor"
     }
   ],
   "menu": [
@@ -120,6 +144,33 @@
           "order": 1,
           "path": "invoice-request",
           "permission": "subject.ventas.invoice-request.read",
+          "icon": "document"
+        },
+        {
+          "id": "ventas.purchase-request",
+          "label": "Solicitudes de compra",
+          "pageId": "ventas.purchase-request",
+          "order": 1,
+          "path": "purchase-request",
+          "permission": "subject.ventas.purchase-request.read",
+          "icon": "document"
+        },
+        {
+          "id": "ventas.supplier-invoice",
+          "label": "Facturas de proveedor",
+          "pageId": "ventas.supplier-invoice",
+          "order": 1,
+          "path": "supplier-invoice",
+          "permission": "subject.ventas.supplier-invoice.read",
+          "icon": "document"
+        },
+        {
+          "id": "ventas.supplier-payment",
+          "label": "Pagos a proveedor",
+          "pageId": "ventas.supplier-payment",
+          "order": 1,
+          "path": "supplier-payment",
+          "permission": "subject.ventas.supplier-payment.read",
           "icon": "document"
         },
         {
@@ -178,6 +229,21 @@
       "id": "ventas.sku",
       "path": "sku",
       "permission": "subject.ventas.sku.read"
+    },
+    {
+      "id": "ventas.purchase-request",
+      "path": "purchase-request",
+      "permission": "subject.ventas.purchase-request.read"
+    },
+    {
+      "id": "ventas.supplier-invoice",
+      "path": "supplier-invoice",
+      "permission": "subject.ventas.supplier-invoice.read"
+    },
+    {
+      "id": "ventas.supplier-payment",
+      "path": "supplier-payment",
+      "permission": "subject.ventas.supplier-payment.read"
     }
   ],
   "storage": {
@@ -191,7 +257,10 @@
     "products": "products",
     "lista-de-precios": "lista-de-precios",
     "contacto": "contacto",
-    "sku": "sku"
+    "sku": "sku",
+    "purchase-request": "purchase-request",
+    "supplier-invoice": "supplier-invoice",
+    "supplier-payment": "supplier-payment"
   },
   "dependsOn": [
     "subject-almacen"

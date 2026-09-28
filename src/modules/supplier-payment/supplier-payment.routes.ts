@@ -1,0 +1,50 @@
+import { define_crud, define_module } from "@opus-perpetuus/imperium-core-kit";
+import { supplier_payment_pages } from "./supplier-payment.pages.ts";
+import { supplier_payment_tables } from "./supplier-payment.tables.ts";
+
+export const supplier_payment_module = define_module({
+  resource: "supplier-payment",
+  labels: {
+    singular: "Pago a proveedor",
+    plural: "Pagos a proveedor",
+    read: "Ver Pagos a proveedor",
+    write: "Editar Pagos a proveedor",
+  },
+  routes: define_crud({
+    resource: "supplier-payment",
+    table: "supplier_payment",
+    soft_delete: true,
+    soft_delete_field: "is_active",
+    history: true,
+    default_sort: "name:asc",
+    id_prefix: "pagoprov",
+    fields: {
+      name: { type: "string", required: true, search: true },
+      description: { type: "string", search: true },
+      is_active: { type: "boolean" },
+      state: { type: "string" },
+      ref: { type: "string", search: true },
+      search_field: { type: "string", search: true },
+      created_by: { type: "string" },
+      custom_data: { type: "json" },
+      payload: { type: "json" },
+      folio: { type: "number" },
+      supplier_invoice: { type: "string", search: true },
+      numero_factura: { type: "string", search: true },
+      purchase_order: { type: "string", search: true },
+      proveedor: { type: "string", search: true },
+      proveedor_nombre: { type: "string", search: true },
+      fecha_pago: { type: "string", search: true },
+      metodo_pago: { type: "string", search: true },
+      referencia: { type: "string", search: true },
+      monto: { type: "number" },
+      status: { type: "string", search: true },
+      motivo_cancelacion: { type: "string", search: true },
+      notas: { type: "string", search: true },
+    },
+    options_map: { value: "id", label: "name" },
+  }),
+  tables: supplier_payment_tables,
+  pages: supplier_payment_pages,
+  menu: [],
+});

@@ -7,6 +7,9 @@ import { products_module } from "./modules/products/products.routes.ts";
 import { lista_de_precios_module } from "./modules/lista-de-precios/lista-de-precios.routes.ts";
 import { contacto_module } from "./modules/contacto/contacto.routes.ts";
 import { sku_module } from "./modules/sku/sku.routes.ts";
+import { purchase_request_module } from "./modules/purchase-request/purchase-request.routes.ts";
+import { supplier_invoice_module } from "./modules/supplier-invoice/supplier-invoice.routes.ts";
+import { supplier_payment_module } from "./modules/supplier-payment/supplier-payment.routes.ts";
 import { seed_demo } from "./seed.ts";
 
 export const SUBJECT = define_subject({
@@ -22,7 +25,7 @@ export const SUBJECT = define_subject({
     label: "Ventas",
     order: 0,
   },
-  modules: [purchase_order_module, pedidos_module, invoice_request_module, products_module, lista_de_precios_module, contacto_module, sku_module],
+  modules: [purchase_order_module, pedidos_module, invoice_request_module, products_module, lista_de_precios_module, contacto_module, sku_module, purchase_request_module, supplier_invoice_module, supplier_payment_module],
   seed: seed_demo,
 });
 

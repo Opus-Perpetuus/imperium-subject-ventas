@@ -116,6 +116,7 @@ export const purchase_order_pages: KirletPageDecl[] = [
               { name: "aprobado_por_nombre", component: "input-text", label: "aprobado por nombre" },
               { name: "recepciones", component: "input-json", label: "recepciones" },
               { name: "facturas_proveedor", component: "input-json", label: "facturas proveedor" },
+              { name: "solicitudes_origen", component: "input-json", label: "solicitudes origen" },
             ],
           },
         },

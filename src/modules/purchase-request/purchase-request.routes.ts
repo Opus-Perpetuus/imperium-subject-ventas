@@ -1,0 +1,50 @@
+import { define_crud, define_module } from "@opus-perpetuus/imperium-core-kit";
+import { purchase_request_pages } from "./purchase-request.pages.ts";
+import { purchase_request_tables } from "./purchase-request.tables.ts";
+
+export const purchase_request_module = define_module({
+  resource: "purchase-request",
+  labels: {
+    singular: "Solicitud de compra",
+    plural: "Solicitudes de compra",
+    read: "Ver Solicitudes de compra",
+    write: "Editar Solicitudes de compra",
+  },
+  routes: define_crud({
+    resource: "purchase-request",
+    table: "purchase_request",
+    soft_delete: true,
+    soft_delete_field: "is_active",
+    history: true,
+    default_sort: "name:asc",
+    id_prefix: "solicitud",
+    fields: {
+      name: { type: "string", required: true, search: true },
+      description: { type: "string", search: true },
+      is_active: { type: "boolean" },
+      state: { type: "string" },
+      ref: { type: "string", search: true },
+      search_field: { type: "string", search: true },
+      created_by: { type: "string" },
+      custom_data: { type: "json" },
+      payload: { type: "json" },
+      folio: { type: "number" },
+      solicitante: { type: "string", search: true },
+      solicitante_nombre: { type: "string", search: true },
+      departamento: { type: "string", search: true },
+      fecha_requerida: { type: "string", search: true },
+      estado: { type: "string", search: true },
+      total_estimado: { type: "number" },
+      aprobado_por: { type: "string", search: true },
+      aprobado_por_nombre: { type: "string", search: true },
+      fecha_aprobacion: { type: "string", search: true },
+      motivo_rechazo: { type: "string", search: true },
+      ordenes_compra: { type: "json" },
+      articulos: { type: "json" },
+    },
+    options_map: { value: "id", label: "name" },
+  }),
+  tables: purchase_request_tables,
+  pages: purchase_request_pages,
+  menu: [],
+});

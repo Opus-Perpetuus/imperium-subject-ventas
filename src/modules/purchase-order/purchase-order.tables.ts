@@ -60,6 +60,7 @@ export const purchase_order_tables: KirletTableDecl[] = [
       { name: "aprobado_por_nombre", type: "text" },
       { name: "recepciones", type: "json" },
       { name: "facturas_proveedor", type: "json" },
+      { name: "solicitudes_origen", type: "json" },
     ],
     indexes: [
       { name: "idx_purchase_order_name", columns: ["name"] },
