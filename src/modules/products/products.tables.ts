@@ -41,6 +41,11 @@ export const products_tables: KirletTableDecl[] = [
       { name: "ubicacion_preferida_codigo", type: "text" },
       { name: "proveedor", type: "text" },
       { name: "proveedor_nombre", type: "text" },
+      // Reglas de venta del POS (listas JSON; vacías = sin cambio).
+      { name: "precios_escala", type: "json" },
+      { name: "promociones", type: "json" },
+      { name: "conversiones_unidad", type: "json" },
+      { name: "kit_componentes", type: "json" },
     ],
     indexes: [
       { name: "idx_products_name", columns: ["name"] },
