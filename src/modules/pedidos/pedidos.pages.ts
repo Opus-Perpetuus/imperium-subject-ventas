@@ -59,7 +59,12 @@ export const pedidos_pages: KirletPageDecl[] = [
               { name: "contacto", component: "input-datalist", label: "contacto", optionsSource: "api://m/subject-ventas/contacto?as=options&limite=1000" },
               { name: "contacto_id", component: "input-text", label: "contacto id" },
               { name: "usuario", component: "input-datalist", label: "usuario", optionsSource: "api://m/subject-configuracion/user?as=options&limite=1000" },
-              { name: "estado", component: "input-text", label: "estado" },
+              {
+                name: "estado",
+                component: "input-status",
+                label: "estado",
+                // Opciones: status-option-control (seed en status-seeds.ts).
+              },
               { name: "total", component: "input-money", label: "total" },
               { name: "iva", component: "input-text", label: "iva" },
               { name: "importe", component: "input-money", label: "importe" },

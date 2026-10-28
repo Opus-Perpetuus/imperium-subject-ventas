@@ -59,14 +59,9 @@ export const purchase_order_pages: KirletPageDecl[] = [
               { name: "proveedor_id", component: "input-text", label: "proveedor id" },
               {
                 name: "estado",
-                component: "input-menu",
+                component: "input-status",
                 label: "estado",
-                options: [
-                  { value: "borrador", label: "Borrador" },
-                  { value: "aprobada", label: "Aprobada" },
-                  { value: "parcialmente_recibida", label: "Recepción parcial" },
-                  { value: "confirmada", label: "Confirmada" },
-                ],
+                // Opciones: status-option-control (seed en status-seeds.ts).
               },
               {
                 name: "tipo_origen",
